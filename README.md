@@ -47,6 +47,13 @@ Then run:
 ```bash
 streamlit run streamlit_app.py
 ```
+## Evaluation
+
+I tested retrieval on 12 factual questions about a research paper (dataset, optimizer, epochs, metrics, future work). For each question, I checked whether the expected answer text appeared in the top 6 retrieved chunks.
+
+**Result: 12/12 questions had the answer in the retrieved context.**
+
+Caveats: this is a small, keyword-based test. It measures retrieval only, not whether the LLM's final answer is correct. Run it yourself with `python evaluate.py` after placing a PDF named `paper.pdf` in the project folder and editing the questions.
 
 ## Limitations
 
